@@ -2,7 +2,10 @@ package uz.itschool.hunger
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import uz.itschool.hunger.adapter.FoodTypesAdapter
 import uz.itschool.hunger.databinding.ActivityMainBinding
+import uz.itschool.hunger.model.Food
 import uz.itschool.hunger.model.Reklama
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +16,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        var adapter = FoodTypesAdapter(foods())
+        var manager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        binding.recycle.layoutManager = manager
+        binding.recycle.adapter = adapter
+
 
     }
 
@@ -20,6 +28,23 @@ class MainActivity : AppCompatActivity() {
 
         reklamalar.add(Reklama("kjhfgid shgklhgsk", R.drawable.donut))
 
+
+    }
+
+    fun foods():List<Food>{
+        var list = arrayListOf<Food>()
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        list.add(Food("donut","donut",5.5f,R.drawable.donut,"yaxshi yeb olmaysan"))
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        list.add(Food("hamburger","burger",5.5f,R.drawable.img,"yaxshi yeb olmaysan"))
+        return list
 
     }
 }

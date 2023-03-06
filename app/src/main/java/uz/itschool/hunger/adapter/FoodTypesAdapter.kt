@@ -6,11 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
 import uz.itschool.hunger.R
-import uz.itschool.hunger.model.FoodTypes
+import uz.itschool.hunger.model.Food
 
-class FoodTypesAdapter(var listFoods:List<FoodTypes>): RecyclerView.Adapter<FoodTypesAdapter.MyHolder>() {
+class FoodTypesAdapter(var listFoods:List<Food>): RecyclerView.Adapter<FoodTypesAdapter.MyHolder>() {
     class MyHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         var name = itemView.findViewById<TextView>(R.id.name)
         var img = itemView.findViewById<ImageView>(R.id.image)
@@ -27,8 +26,8 @@ class FoodTypesAdapter(var listFoods:List<FoodTypes>): RecyclerView.Adapter<Food
 
         var cort = listFoods.get(position)
 
-        holder.img.setImageResource(cort.img)
-        holder.name.text = cort.naem
+        holder.img.setImageResource(cort.Image)
+        holder.name.text = cort.name
 
     }
 
