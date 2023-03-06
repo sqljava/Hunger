@@ -18,5 +18,8 @@ class MainActivity : AppCompatActivity() {
 
     fun reklamaMassiv(){
 
+        reklamalar.add(Reklama("kjhfgid shgklhgsk", R.drawable.donut))
+
+
     }
 }
