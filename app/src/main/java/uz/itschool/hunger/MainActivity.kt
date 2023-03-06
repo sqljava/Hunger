@@ -2,6 +2,7 @@ package uz.itschool.hunger
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import uz.itschool.hunger.adapter.ReklamaAdapter
 import uz.itschool.hunger.databinding.ActivityMainBinding
 import uz.itschool.hunger.model.Food
 import uz.itschool.hunger.model.Reklama
@@ -13,6 +14,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        reklamaMassiv()
+
+        var diyorAdapter = ReklamaAdapter(reklamalar)
+
+        binding.recyclerReklama.adapter = diyorAdapter
+
+        binding.recyclerReklama.layoutManager
+
+
 
 
     }
