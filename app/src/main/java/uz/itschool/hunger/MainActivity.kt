@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var adapter = FoodTypesAdapter(listOf())
+        var adapter = FoodTypesAdapter(foods())
         var manager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         binding.recycle.layoutManager = manager
         binding.recycle.adapter = adapter
