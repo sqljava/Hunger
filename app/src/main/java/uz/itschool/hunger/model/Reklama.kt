@@ -1,4 +1,4 @@
 package uz.itschool.hunger.model
 
-class Reklama {
+class Reklama(var nomi : String, var rasm : Int) {
 }
