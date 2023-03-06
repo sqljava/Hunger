@@ -2,6 +2,8 @@ package uz.itschool.hunger
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import uz.itschool.hunger.adapter.FoodTypesAdapter
 import uz.itschool.hunger.databinding.ActivityMainBinding
 import uz.itschool.hunger.model.Food
 import uz.itschool.hunger.model.Reklama
@@ -13,6 +15,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        var adapter = FoodTypesAdapter(listOf())
+        var manager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        binding.recycle.layoutManager = manager
+        binding.recycle.adapter = adapter
 
 
     }

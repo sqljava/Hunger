@@ -26,7 +26,7 @@ class FoodTypesAdapter(var listFoods:List<Food>): RecyclerView.Adapter<FoodTypes
 
         var cort = listFoods.get(position)
 
-        holder.img.setImageResource(cort.img)
+        holder.img.setImageResource(cort.Image)
         holder.name.text = cort.name
 
     }
