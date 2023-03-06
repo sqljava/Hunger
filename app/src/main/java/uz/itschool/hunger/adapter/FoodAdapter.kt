@@ -10,7 +10,7 @@ import uz.itschool.hunger.model.Food
 import uz.itschool.hunger.R
 
 class FoodAdapter(var foodlist:List<Food>): RecyclerView.Adapter<FoodAdapter.MyHolder>() {
-    public class MyHolder(ItemView: View):RecyclerView.ViewHolder(ItemView){
+     class MyHolder(ItemView: View):RecyclerView.ViewHolder(ItemView){
         var food_name=itemView.findViewById<TextView>(R.id.food_name)
         var comment=itemView.findViewById<TextView>(R.id.coment)
         var image=itemView.findViewById<ImageView>(R.id.image)
