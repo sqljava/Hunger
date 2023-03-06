@@ -36,13 +36,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="fbvgvb flhbfvhsdihdshfil hfvdvh"
-                    android:layout_toEndOf="@+id/profile_image"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
+                    android:layout_alignParentTop="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
-                    />
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:text="fbvgvb flhbfvhsdihdshfil hfvdvh"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
 
             </RelativeLayout>
 
@@ -99,7 +99,23 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="5"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Best Offers"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                ></TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                ></androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
 
