@@ -6,7 +6,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -23,11 +23,19 @@
             android:background="#FF9800">
 
             <TextView
+                android:id="@+id/reklamaName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="gshd fgklhsdflk"
                 android:textSize="30dp"
                 android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/reklamaImg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/donut"
+                android:layout_gravity="end"/>
 
 
 

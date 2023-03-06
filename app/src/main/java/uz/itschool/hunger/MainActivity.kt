@@ -2,47 +2,24 @@ package uz.itschool.hunger
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
-import uz.itschool.hunger.adapter.FoodTypesAdapter
 import uz.itschool.hunger.databinding.ActivityMainBinding
-import uz.itschool.hunger.model.Food
+import uz.itschool.hunger.model.Reklama
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding : ActivityMainBinding
+    var reklamalar = mutableListOf<Reklama>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var adapter = FoodTypesAdapter(list())
-        var manager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL ,false)
-        binding.recycle.layoutManager = manager
-        binding.recycle.adapter = adapter
-
-
-
-
 
     }
-    private fun list():List<Food>{
-        var list = arrayListOf<Food>()
 
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.donut,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.donut,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
-        list.add(Food("gamburger","burger",5.5f,R.drawable.img,"yaxshi"))
+    fun reklamaMassiv(){
 
-        return list
+        reklamalar.add(Reklama("kjhfgid shgklhgsk", R.drawable.donut))
+
+
     }
 }
